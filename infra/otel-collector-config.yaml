@@ -1,0 +1,34 @@
+receivers:
+  prometheus:
+    config:
+      scrape_configs:
+        - job_name: 'sock-shop-services'
+          scrape_interval: 15s
+          metrics_path: /metrics
+          static_configs:
+            - targets:
+              - 'catalogue:80'
+              - 'carts:80'
+              - 'orders:80'
+              - 'payment:80'
+              - 'shipping:80'
+              - 'user:80'
+        - job_name: 'sock-shop-frontend'
+          scrape_interval: 15s
+          metrics_path: /metrics
+          static_configs:
+            - targets: ['front-end:8079']
+        - job_name: 'cadvisor'
+          scrape_interval: 15s
+          static_configs:
+            - targets: ['cadvisor:8080']
+
+exporters:
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+
+service:
+  pipelines:
+    metrics:
+      receivers: [prometheus]
+      exporters: [prometheus]
