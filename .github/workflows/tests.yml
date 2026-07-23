@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install pytest
+        run: pip install pytest pandas
       - name: Run tests
         run: |
           cd models/eval
