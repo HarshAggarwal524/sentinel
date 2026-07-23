@@ -1,0 +1,57 @@
+_wandb:
+    value:
+        cli_version: 0.28.1
+        e:
+            dcakghk7pxrcp56sut8twabk9hi1yz5w:
+                apple:
+                    ecpuCores: 4
+                    gpuCores: 7
+                    macModel: MacBookAir10,1
+                    memoryGb: 8
+                    name: Apple M1
+                    pcpuCores: 4
+                    ramTotalBytes: "8589934592"
+                    swapTotalBytes: "11811160064"
+                codePath: models/eval/run_full_nab_eval.py
+                codePathLocal: run_full_nab_eval.py
+                cpu_count: 8
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "245107195904"
+                        used: "221094682624"
+                email: harshaggarwalofficial1@gmail.com
+                executable: /Users/harshaggarwal/Projects_4/sentinel/.venv/bin/python
+                git:
+                    commit: 089b85515abb101f71f8f91944fa87a2546dcb11
+                    remote: https://github.com/HarshAggarwal524/sentinel.git
+                host: Harshs-Macbook.local
+                memory:
+                    total: "8589934592"
+                os: macOS-26.5.1-arm64-arm-64bit-Mach-O
+                program: /Users/harshaggarwal/Projects_4/sentinel/models/eval/run_full_nab_eval.py
+                python: CPython 3.13.13
+                root: /Users/harshaggarwal/Projects_4/sentinel/models/eval
+                startedAt: "2026-07-23T10:21:22.584603Z"
+                writerId: dcakghk7pxrcp56sut8twabk9hi1yz5w
+        m: []
+        python_version: 3.13.13
+        t:
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.13.13
+            "5": 0.28.1
+            "8":
+                - 2
+            "12": 0.28.1
+            "13": darwin-arm64
+dataset:
+    value: full-NAB
+esd_period:
+    value: 288
+esd_threshold:
+    value: 3
+prophet_interval_width:
+    value: 0.99

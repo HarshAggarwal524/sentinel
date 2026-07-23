@@ -1,0 +1,38 @@
+{
+  "os":  "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.13",
+  "startedAt":  "2026-07-23T10:21:22.584603Z",
+  "program":  "/Users/harshaggarwal/Projects_4/sentinel/models/eval/run_full_nab_eval.py",
+  "codePath":  "models/eval/run_full_nab_eval.py",
+  "codePathLocal":  "run_full_nab_eval.py",
+  "git":  {
+    "remote":  "https://github.com/HarshAggarwal524/sentinel.git",
+    "commit":  "089b85515abb101f71f8f91944fa87a2546dcb11"
+  },
+  "email":  "harshaggarwalofficial1@gmail.com",
+  "root":  "/Users/harshaggarwal/Projects_4/sentinel/models/eval",
+  "host":  "Harshs-Macbook.local",
+  "executable":  "/Users/harshaggarwal/Projects_4/sentinel/.venv/bin/python",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "245107195904",
+      "used":  "221094682624"
+    }
+  },
+  "memory":  {
+    "total":  "8589934592"
+  },
+  "apple":  {
+    "name":  "Apple M1",
+    "ecpuCores":  4,
+    "pcpuCores":  4,
+    "gpuCores":  7,
+    "memoryGb":  8,
+    "swapTotalBytes":  "11811160064",
+    "ramTotalBytes":  "8589934592",
+    "macModel":  "MacBookAir10,1"
+  },
+  "writerId":  "dcakghk7pxrcp56sut8twabk9hi1yz5w"
+}
