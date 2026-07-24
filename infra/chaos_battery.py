@@ -28,6 +28,10 @@ MIN_GAP = 1800   # 30 minutes minimum of normal traffic between faults
 MAX_GAP = 5400   # 90 minutes maximum
 
 
+def get_db_conn():
+    return psycopg2.connect(**DB_CONFIG)
+
+
 def log_start(conn, experiment_type, target, parameters=None, notes=None):
     cur = conn.cursor()
     cur.execute(
@@ -112,14 +116,13 @@ def do_container_kill(conn, target):
 EXPERIMENTS = [do_cpu_stress, do_network_delay, do_packet_loss, do_container_kill]
 
 if __name__ == "__main__":
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_db_conn()
     experiment_count = 0
 
     print("Chaos battery started. Running indefinitely until you Ctrl+C.")
     print(f"Gap between experiments: {MIN_GAP//60}–{MAX_GAP//60} minutes\n")
 
     while True:
-        # Pick a random experiment and a random target
         experiment_fn = random.choice(EXPERIMENTS)
         target = random.choice(TARGETS)
         experiment_count += 1
@@ -130,10 +133,23 @@ if __name__ == "__main__":
         try:
             experiment_fn(conn, target)
             print(f"[{now}] Done. Total experiments logged: {experiment_count}")
+
+        except (psycopg2.OperationalError, psycopg2.InterfaceError) as e:
+            print(f"[{now}] DB connection lost: {e} — reconnecting and retrying once")
+            try:
+                conn.close()
+            except Exception:
+                pass
+            conn = get_db_conn()
+            try:
+                experiment_fn(conn, target)  # retry the SAME experiment with fresh connection
+                print(f"[{now}] Done after reconnect. Total experiments logged: {experiment_count}")
+            except Exception as e2:
+                print(f"[{now}] Retry also failed: {e2} — skipping, continuing battery")
+
         except Exception as e:
             print(f"[{now}] Failed: {e} — skipping, continuing battery")
 
-        # Wait a random gap of normal traffic before the next fault
         gap = random.randint(MIN_GAP, MAX_GAP)
         next_time = datetime.now().strftime("%H:%M:%S")
         print(f"[{next_time}] Sleeping {gap//60} minutes until next experiment...\n")

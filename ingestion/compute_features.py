@@ -16,10 +16,13 @@ WINDOWS = {
 }
 
 
+def get_db_conn():
+    return psycopg2.connect(**DB_CONFIG)
+
+
 def compute_and_store_features(conn):
     cur = conn.cursor()
 
-    # Find every distinct (service, metric) pair we currently have data for
     cur.execute("SELECT DISTINCT service_name, metric_name FROM metrics;")
     pairs = cur.fetchall()
 
@@ -39,7 +42,7 @@ def compute_and_store_features(conn):
             avg_value, stddev_value = cur.fetchone()
 
             if avg_value is None:
-                continue  # no data in this window yet, skip
+                continue
 
             cur.execute(
                 """
@@ -57,9 +60,23 @@ def compute_and_store_features(conn):
 
 
 if __name__ == "__main__":
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_db_conn()
     print("Computing rolling features every 60 seconds...")
+
     while True:
-        n = compute_and_store_features(conn)
-        print(f"Wrote {n} feature rows.")
+        try:
+            n = compute_and_store_features(conn)
+            print(f"Wrote {n} feature rows.")
+
+        except psycopg2.OperationalError as e:
+            print(f"[warn] Postgres connection dropped: {e} — reconnecting in 5s")
+            time.sleep(5)
+            try:
+                conn = get_db_conn()
+            except Exception as e2:
+                print(f"[warn] Postgres reconnect failed: {e2}")
+
+        except Exception as e:
+            print(f"[warn] Unexpected error: {e} — continuing")
+
         time.sleep(60)
