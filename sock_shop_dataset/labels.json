@@ -1,0 +1,470 @@
+{
+  "sock_shop/container_kill/sentinel-catalogue-1/fault_5.csv": [
+    [
+      "2026-07-23 11:19:17.147017",
+      "2026-07-23 11:19:27.971989"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-shipping-1/fault_6.csv": [
+    [
+      "2026-07-23 12:03:11.985887",
+      "2026-07-23 12:04:47.080367"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-catalogue-1/fault_11.csv": [
+    [
+      "2026-07-23 20:14:33.881706",
+      "2026-07-23 20:16:09.236274"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-orders-1/fault_12.csv": [
+    [
+      "2026-07-23 21:09:38.738523",
+      "2026-07-23 21:11:17.853433"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-front-end-1/fault_13.csv": [
+    [
+      "2026-07-23 22:10:55.008739",
+      "2026-07-23 22:11:09.146630"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-front-end-1/fault_14.csv": [
+    [
+      "2026-07-23 23:31:49.081579",
+      "2026-07-23 23:32:01.523218"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-catalogue-1/fault_15.csv": [
+    [
+      "2026-07-24 00:59:14.611030",
+      "2026-07-24 01:01:14.780252"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-catalogue-1/fault_16.csv": [
+    [
+      "2026-07-24 01:52:09.951751",
+      "2026-07-24 01:53:45.021560"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-payment-1/fault_17.csv": [
+    [
+      "2026-07-24 03:07:30.732920",
+      "2026-07-24 03:09:38.496894"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-catalogue-1/fault_18.csv": [
+    [
+      "2026-07-24 04:06:53.679026",
+      "2026-07-24 04:07:04.785579"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-shipping-1/fault_19.csv": [
+    [
+      "2026-07-24 05:35:49.020245",
+      "2026-07-24 05:37:36.551091"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-orders-1/fault_20.csv": [
+    [
+      "2026-07-24 06:24:47.862093",
+      "2026-07-24 06:26:23.013292"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-catalogue-1/fault_21.csv": [
+    [
+      "2026-07-24 07:26:58.328214",
+      "2026-07-24 07:28:33.529013"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-carts-1/fault_22.csv": [
+    [
+      "2026-07-24 08:08:05.690715",
+      "2026-07-24 08:09:43.930508"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-front-end-1/fault_23.csv": [
+    [
+      "2026-07-24 09:09:53.897227",
+      "2026-07-24 09:10:43.373597"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-payment-1/fault_24.csv": [
+    [
+      "2026-07-24 10:06:29.157248",
+      "2026-07-24 10:06:41.649632"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-payment-1/fault_25.csv": [
+    [
+      "2026-07-24 11:16:57.900670",
+      "2026-07-24 11:18:34.612699"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-front-end-1/fault_26.csv": [
+    [
+      "2026-07-24 12:29:01.897246",
+      "2026-07-24 12:30:56.803023"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-payment-1/fault_27.csv": [
+    [
+      "2026-07-24 13:50:45.510290",
+      "2026-07-24 13:51:14.056491"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-orders-1/fault_28.csv": [
+    [
+      "2026-07-24 15:01:21.181598",
+      "2026-07-24 15:01:36.069456"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-payment-1/fault_30.csv": [
+    [
+      "2026-07-24 17:22:54.720092",
+      "2026-07-24 17:23:10.096997"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-front-end-1/fault_31.csv": [
+    [
+      "2026-07-24 17:57:36.837732",
+      "2026-07-24 17:59:51.447349"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-carts-1/fault_32.csv": [
+    [
+      "2026-07-24 18:32:22.742418",
+      "2026-07-24 18:34:21.485854"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-shipping-1/fault_33.csv": [
+    [
+      "2026-07-24 19:52:54.492246",
+      "2026-07-24 19:54:33.524086"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-carts-1/fault_34.csv": [
+    [
+      "2026-07-24 20:34:48.097118",
+      "2026-07-24 20:36:30.296583"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-payment-1/fault_35.csv": [
+    [
+      "2026-07-24 21:15:29.664660",
+      "2026-07-24 21:17:03.596668"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-catalogue-1/fault_36.csv": [
+    [
+      "2026-07-24 21:47:49.041564",
+      "2026-07-24 21:48:08.655639"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-orders-1/fault_37.csv": [
+    [
+      "2026-07-24 22:53:33.200263",
+      "2026-07-24 22:53:47.488441"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-catalogue-1/fault_38.csv": [
+    [
+      "2026-07-25 00:03:52.387970",
+      "2026-07-25 00:05:27.578886"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-carts-1/fault_39.csv": [
+    [
+      "2026-07-25 01:19:23.320613",
+      "2026-07-25 01:21:01.538230"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-orders-1/fault_40.csv": [
+    [
+      "2026-07-25 02:10:21.269134",
+      "2026-07-25 02:12:19.465075"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-front-end-1/fault_41.csv": [
+    [
+      "2026-07-25 03:31:12.367141",
+      "2026-07-25 03:32:42.367141"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-front-end-1/fault_74.csv": [
+    [
+      "2026-07-25 03:32:49.130827",
+      "2026-07-25 03:34:23.858823"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-carts-1/fault_75.csv": [
+    [
+      "2026-07-25 04:37:27.181671",
+      "2026-07-25 04:39:03.047400"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-catalogue-1/fault_76.csv": [
+    [
+      "2026-07-25 05:34:30.300718",
+      "2026-07-25 05:36:04.252432"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-carts-1/fault_77.csv": [
+    [
+      "2026-07-25 06:49:11.911104",
+      "2026-07-25 06:51:29.916202"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-shipping-1/fault_78.csv": [
+    [
+      "2026-07-25 07:47:58.100463",
+      "2026-07-25 07:49:37.591375"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-shipping-1/fault_81.csv": [
+    [
+      "2026-07-25 11:21:54.219099",
+      "2026-07-25 11:23:30.000728"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-carts-1/fault_82.csv": [
+    [
+      "2026-07-25 11:55:31.148467",
+      "2026-07-25 11:57:17.841625"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-orders-1/fault_83.csv": [
+    [
+      "2026-07-25 12:44:03.114362",
+      "2026-07-25 12:45:48.922680"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-carts-1/fault_84.csv": [
+    [
+      "2026-07-25 13:36:26.531428",
+      "2026-07-25 13:36:41.463566"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-front-end-1/fault_85.csv": [
+    [
+      "2026-07-25 14:21:02.754426",
+      "2026-07-25 14:23:03.376726"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-carts-1/fault_86.csv": [
+    [
+      "2026-07-25 15:13:04.726510",
+      "2026-07-25 15:14:40.047322"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-catalogue-1/fault_87.csv": [
+    [
+      "2026-07-25 15:56:25.896033",
+      "2026-07-25 15:58:21.544868"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-payment-1/fault_88.csv": [
+    [
+      "2026-07-25 16:56:05.045261",
+      "2026-07-25 16:58:06.235615"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-payment-1/fault_89.csv": [
+    [
+      "2026-07-25 17:38:02.431057",
+      "2026-07-25 17:38:16.933403"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-front-end-1/fault_90.csv": [
+    [
+      "2026-07-25 18:41:17.874119",
+      "2026-07-25 18:42:53.252187"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-catalogue-1/fault_91.csv": [
+    [
+      "2026-07-25 19:34:59.296684",
+      "2026-07-25 19:35:27.283702"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-catalogue-1/fault_92.csv": [
+    [
+      "2026-07-25 20:54:25.028530",
+      "2026-07-25 20:56:00.196879"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-payment-1/fault_93.csv": [
+    [
+      "2026-07-25 21:45:42.410674",
+      "2026-07-25 21:47:20.440546"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-catalogue-1/fault_94.csv": [
+    [
+      "2026-07-25 22:22:25.182168",
+      "2026-07-25 22:22:48.655081"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-front-end-1/fault_95.csv": [
+    [
+      "2026-07-25 23:29:00.809233",
+      "2026-07-25 23:29:20.646516"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-carts-1/fault_96.csv": [
+    [
+      "2026-07-26 00:03:10.482140",
+      "2026-07-26 00:04:52.057891"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-catalogue-1/fault_97.csv": [
+    [
+      "2026-07-26 00:41:04.176068",
+      "2026-07-26 00:41:21.838585"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-orders-1/fault_98.csv": [
+    [
+      "2026-07-26 01:21:07.739167",
+      "2026-07-26 01:21:31.994804"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-catalogue-1/fault_99.csv": [
+    [
+      "2026-07-26 02:44:54.335962",
+      "2026-07-26 02:46:29.391273"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-payment-1/fault_100.csv": [
+    [
+      "2026-07-26 03:29:47.606507",
+      "2026-07-26 03:31:18.963398"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-catalogue-1/fault_101.csv": [
+    [
+      "2026-07-26 04:51:53.345466",
+      "2026-07-26 04:53:28.464025"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-payment-1/fault_102.csv": [
+    [
+      "2026-07-26 06:01:10.323833",
+      "2026-07-26 06:01:26.371100"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-shipping-1/fault_103.csv": [
+    [
+      "2026-07-26 06:37:15.901498",
+      "2026-07-26 06:38:50.741182"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-shipping-1/fault_104.csv": [
+    [
+      "2026-07-26 08:01:07.361456",
+      "2026-07-26 08:03:02.962241"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-catalogue-1/fault_106.csv": [
+    [
+      "2026-07-26 10:14:17.760482",
+      "2026-07-26 10:16:04.996220"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-orders-1/fault_107.csv": [
+    [
+      "2026-07-26 10:53:44.132946",
+      "2026-07-26 10:55:22.125145"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-front-end-1/fault_109.csv": [
+    [
+      "2026-07-26 13:03:38.766090",
+      "2026-07-26 13:05:22.331136"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-catalogue-1/fault_110.csv": [
+    [
+      "2026-07-26 13:51:05.167330",
+      "2026-07-26 13:53:11.823182"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-shipping-1/fault_112.csv": [
+    [
+      "2026-07-26 15:37:12.585495",
+      "2026-07-26 15:37:27.637763"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-carts-1/fault_113.csv": [
+    [
+      "2026-07-26 16:26:33.100067",
+      "2026-07-26 16:28:24.013064"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-front-end-1/fault_114.csv": [
+    [
+      "2026-07-26 17:13:58.356094",
+      "2026-07-26 17:15:35.311597"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-orders-1/fault_115.csv": [
+    [
+      "2026-07-26 18:42:27.087372",
+      "2026-07-26 18:44:02.640339"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-payment-1/fault_118.csv": [
+    [
+      "2026-07-26 21:45:29.231848",
+      "2026-07-26 21:47:04.294310"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-carts-1/fault_120.csv": [
+    [
+      "2026-07-26 23:50:08.999241",
+      "2026-07-26 23:52:14.448482"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-shipping-1/fault_121.csv": [
+    [
+      "2026-07-27 00:52:56.747946",
+      "2026-07-27 00:54:45.766256"
+    ]
+  ],
+  "sock_shop/container_kill/sentinel-orders-1/fault_122.csv": [
+    [
+      "2026-07-27 02:00:20.643046",
+      "2026-07-27 02:01:02.806590"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-payment-1/fault_123.csv": [
+    [
+      "2026-07-27 03:24:28.372381",
+      "2026-07-27 03:26:20.755905"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-carts-1/fault_125.csv": [
+    [
+      "2026-07-27 04:43:47.077714",
+      "2026-07-27 04:45:34.004244"
+    ]
+  ],
+  "sock_shop/network_delay/sentinel-shipping-1/fault_126.csv": [
+    [
+      "2026-07-27 05:30:09.912598",
+      "2026-07-27 05:31:54.022191"
+    ]
+  ],
+  "sock_shop/packet_loss/sentinel-catalogue-1/fault_127.csv": [
+    [
+      "2026-07-27 06:29:55.183527",
+      "2026-07-27 06:31:36.813508"
+    ]
+  ],
+  "sock_shop/cpu_stress/sentinel-carts-1/fault_128.csv": [
+    [
+      "2026-07-27 07:47:09.314946",
+      "2026-07-27 07:48:55.226422"
+    ]
+  ]
+}
