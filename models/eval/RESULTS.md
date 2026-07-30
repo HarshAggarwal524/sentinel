@@ -51,15 +51,19 @@ to per-step rate (delta between consecutive readings) reveals clear spikes
 at fault boundaries. All results marked ⚠️ below used raw counter values
 and are invalid — listed only for historical completeness.
 
-### Full results on Sock Shop Live test set
 
-| Model | Precision | Recall | F1 | Notes |
+### Full results on Sock Shop Live dataset (all rate-corrected)
+
+| Model | Precision | Recall | F1 | Files evaluated |
 |---|---|---|---|---|
-| ESD baseline | 0.051 | 0.077 | 0.057 | ⚠️ raw counter — invalid |
-| Prophet baseline | 0.048 | 0.064 | 0.052 | ⚠️ raw counter — invalid |
-| TCN v1 (raw counter) | 0.076 | 0.114 | 0.087 | ⚠️ raw counter — invalid |
-| LSTM (rate-corrected) | — | — | — | Insufficient data to train |
-| **TCN v2 (rate-corrected)** | **0.136** | **0.227** | **0.158** | ✅ valid |
+| ESD (rate-corrected) | 0.036 | 0.064 | 0.045 | 78 |
+| Prophet (rate-corrected) | 0.051 | 0.064 | 0.056 | 78 |
+| LSTM (rate-corrected) | — | — | — | N/A — failed to converge |
+| **TCN v2 (rate-corrected)** | **0.136** | **0.227** | **0.158** | 15 (test split) |
+
+⚠️ All previous Sock Shop results (ESD: 0.057, Prophet: 0.052, TCN v1: 0.087)
+used raw cumulative counter values and are invalid. Only rate-corrected
+results above should be cited.
 
 ### TCN v2 results by fault type
 
