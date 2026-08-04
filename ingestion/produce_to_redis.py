@@ -28,6 +28,7 @@ def push_metrics_to_stream(r, metrics_text):
                 "value": str(sample.value),
                 "labels": str(sample.labels),
             })
+            r.xtrim(STREAM_NAME, maxlen=50000, approximate=True)
             count += 1
     return count
 
