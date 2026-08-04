@@ -2,6 +2,7 @@ import json
 import os
 import sys
 import pandas as pd
+import numpy as np
 import wandb
 
 sys.path.append("../baselines")
@@ -18,16 +19,24 @@ with open(LABELS_PATH) as f:
 all_files = list(all_labels.keys())
 print(f"Found {len(all_files)} labeled Sock Shop files to evaluate.")
 
+
+def to_rate(values):
+    """Convert cumulative counter to per-step rate."""
+    rates = np.diff(values, prepend=values[0])
+    return np.clip(rates, 0, None)
+
+
 run = wandb.init(
     project="sentinel-anomaly-detection",
-    name="week4-sock-shop-live-eval",
-    tags=["sock-shop-live"],
+    name="week5-sock-shop-rate-corrected-baselines",
+    tags=["sock-shop-live", "rate-corrected"],
     config={
         "esd_period": 10,
         "esd_threshold": 2.5,
         "prophet_interval_width": 0.95,
-        "dataset": "sock-shop-live",
+        "dataset": "sock-shop-live-rate-corrected",
         "total_files": len(all_files),
+        "fix": "rate_conversion",
     }
 )
 
@@ -44,12 +53,15 @@ for relative_path in all_files:
     try:
         df = pd.read_csv(full_path)
         df["timestamp"] = pd.to_datetime(df["timestamp"])
+        df = df.sort_values("timestamp").reset_index(drop=True)
+
+        # Convert cumulative counter to rate
+        df["value"] = np.clip(np.diff(df["value"].values, prepend=df["value"].values[0]), 0, None)
+
     except Exception as e:
         print(f"Skipping {relative_path}: {e}")
         continue
 
-    # Use a smaller period for Sock Shop data (15-second intervals,
-    # so period=10 = ~2.5 minutes, appropriate for short windows)
     try:
         esd_pred = detect_anomalies_seasonal_esd(df, period=10, threshold=2.5)
         esd_score = evaluate_predictions(df, pd.Series(esd_pred), true_windows)
@@ -68,41 +80,42 @@ for relative_path in all_files:
 
     print(f"Done: {relative_path.split('/')[-1]}")
 
+
 def average_scores(results):
     if not results:
         return {}
     df = pd.DataFrame(results)
     return {
         "avg_precision": round(df["precision"].mean(), 3),
-        "avg_recall": round(df["recall"].mean(), 3),
-        "avg_f1": round(df["f1"].mean(), 3),
-        "avg_fp": round(df["false_positives"].mean(), 3),
+        "avg_recall":    round(df["recall"].mean(), 3),
+        "avg_f1":        round(df["f1"].mean(), 3),
+        "avg_fp":        round(df["false_positives"].mean(), 3),
     }
 
-esd_summary = average_scores(esd_results_all)
+esd_summary     = average_scores(esd_results_all)
 prophet_summary = average_scores(prophet_results_all)
 
-print("\n=== SOCK SHOP LIVE RESULTS ===")
-print(f"ESD    (avg across {len(esd_results_all)} files): {esd_summary}")
+print("\n=== RATE-CORRECTED SOCK SHOP RESULTS ===")
+print(f"ESD     (avg across {len(esd_results_all)} files): {esd_summary}")
 print(f"Prophet (avg across {len(prophet_results_all)} files): {prophet_summary}")
 
 wandb.log({
-    "esd/avg_precision": esd_summary.get("avg_precision"),
-    "esd/avg_recall": esd_summary.get("avg_recall"),
-    "esd/avg_f1": esd_summary.get("avg_f1"),
-    "esd/avg_fp_per_file": esd_summary.get("avg_fp"),
+    "esd/avg_precision":    esd_summary.get("avg_precision"),
+    "esd/avg_recall":       esd_summary.get("avg_recall"),
+    "esd/avg_f1":           esd_summary.get("avg_f1"),
+    "esd/avg_fp_per_file":  esd_summary.get("avg_fp"),
     "prophet/avg_precision": prophet_summary.get("avg_precision"),
-    "prophet/avg_recall": prophet_summary.get("avg_recall"),
-    "prophet/avg_f1": prophet_summary.get("avg_f1"),
+    "prophet/avg_recall":    prophet_summary.get("avg_recall"),
+    "prophet/avg_f1":        prophet_summary.get("avg_f1"),
     "prophet/avg_fp_per_file": prophet_summary.get("avg_fp"),
 })
 
-esd_table = wandb.Table(dataframe=pd.DataFrame(esd_results_all))
+esd_table     = wandb.Table(dataframe=pd.DataFrame(esd_results_all))
 prophet_table = wandb.Table(dataframe=pd.DataFrame(prophet_results_all))
 wandb.log({
-    "esd_sock_shop_results": esd_table,
-    "prophet_sock_shop_results": prophet_table,
+    "esd_sock_shop_rate_results":     esd_table,
+    "prophet_sock_shop_rate_results": prophet_table,
 })
 
 wandb.finish()
-print("\nResults logged to W&B under tag: sock-shop-live")
+print("\nResults logged to W&B under tag: sock-shop-live, rate-corrected")

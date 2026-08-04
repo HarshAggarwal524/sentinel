@@ -32,3 +32,5 @@ out/
 *.h5.venv/
 .venv/
 models/experiments/NAB/
+models/eval/wandb/
+sock_shop_dataset.zip
