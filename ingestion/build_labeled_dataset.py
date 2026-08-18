@@ -12,8 +12,8 @@ DB_CONFIG = dict(
     password="sentinel_dev_pw",
 )
 
-CONTEXT_MINUTES_BEFORE = 10
-CONTEXT_MINUTES_AFTER = 10
+CONTEXT_MINUTES_BEFORE = 20
+CONTEXT_MINUTES_AFTER = 20
 TARGET_METRIC = "container_cpu_usage_seconds_total"
 
 # Direct mapping from container name → Docker ID
